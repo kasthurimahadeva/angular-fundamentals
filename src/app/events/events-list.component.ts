@@ -20,7 +20,4 @@ export class EventsListComponent {
     }
   };
 
-  handleEventClick(data: any) {
-    console.log(data);
-  }
 }
