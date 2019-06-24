@@ -16,6 +16,9 @@ import {Component, Input} from '@angular/core';
   selector: 'event-thumbnail',
   styles: [
     `
+      .thumbnail {
+        min-height: 210px;
+      }
       .pad-right {
         padding-right: 10px;
       }
