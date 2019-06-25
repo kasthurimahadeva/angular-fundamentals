@@ -19,11 +19,11 @@ import {Error404Component} from './errors/404.component';
     NavBarComponent,
     EventDetailsComponent,
     EventAddComponent,
-    Error404Component
+    Error404Component,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     {
