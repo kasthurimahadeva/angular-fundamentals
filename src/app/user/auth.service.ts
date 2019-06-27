@@ -8,16 +8,21 @@ export class AuthService {
   currentUser: IUser;
   constructor() { }
 
-  loginUser(userName: string, password: string) {
+  loginUser(user: string, password: string) {
     this.currentUser = {
       id: 1,
-      userName,
       firstName: 'Panda',
-      lastName: 'Karady'
+      lastName: 'Karady',
+      userName: user
     };
   }
 
   isAuthenticated(): boolean {
     return !!this.currentUser;
+  }
+
+  updateProfile(firstName: string, lastName: string) {
+    this.currentUser.firstName = firstName;
+    this.currentUser.lastName = lastName;
   }
 }
