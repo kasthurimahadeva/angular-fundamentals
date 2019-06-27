@@ -24,7 +24,7 @@ import {IEvent} from './shared/event.model';
   styles: [
     `
       .thumbnail {
-        min-height: 210px;
+        min-height: 250px;
       }
       .pad-right {
         padding-right: 10px;
