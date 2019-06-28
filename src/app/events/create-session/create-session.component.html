@@ -40,6 +40,7 @@
     <div class="form-group" [ngClass]="{'error': abstract?.invalid && abstract?.touched}">
       <label for="abstract">Abstract:</label>
       <em *ngIf="abstract.invalid && abstract.touched && abstract?.errors.required">Required</em>
+      <em *ngIf="abstract.invalid && abstract.touched && abstract?.errors.restrictedWords">Restricted word found: {{abstract.errors.restrictedWords}}</em>
       <em *ngIf="abstract.invalid && abstract.touched && abstract?.errors.maxLength">Max length is 400</em>
       <textarea id="abstract" formControlName="abstract" rows=3 class="form-control" placeholder="abstract..."></textarea>
     </div>
