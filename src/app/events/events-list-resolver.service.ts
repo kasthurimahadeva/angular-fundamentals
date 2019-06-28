@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {ActivatedRouteSnapshot, Resolve} from '@angular/router';
+import {Resolve} from '@angular/router';
 import {Observable} from 'rxjs';
-import {EventService} from './shared/event.service';
 import {map} from 'rxjs/operators';
+import {EventService} from './shared/event.service';
 import {IEvent} from './shared/event.model';
 
 @Injectable({

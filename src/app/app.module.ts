@@ -5,13 +5,14 @@ import {
   EventDetailsComponent,
   EventAddComponent,
   EventThumbnailComponent
-} from './events/index';
+} from './events';
 
 import { EventsAppComponent } from './events-app.component';
 import {NavBarComponent} from './nav/nav-bar.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from '../route';
 import {Error404Component} from './errors/404.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,8 @@ import {Error404Component} from './errors/404.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
@@ -41,4 +44,5 @@ export function checkDirtyState(component: EventAddComponent) {
   if (component.isDirty) {
     return window.confirm('You have not saved this event, do you really want to cancel?');
   }
+  return true;
 }
