@@ -1,0 +1,49 @@
+<div class="col-md-12">
+  <h3>Create Session</h3>
+</div>
+<div class="col-md-6">
+  <form autocomplete="off" [formGroup]="newSessionForm" (ngSubmit)="saveSession(newSessionForm.value)">
+    <div class="form-group" [ngClass]="{'error': name?.invalid && name?.touched}">
+      <label for="sessionName">Session Name:</label>
+      <em *ngIf="name.invalid && name.touched">Required</em>
+      <input id="sessionName" type="text" formControlName="name" class="form-control" placeholder="session name..." />
+    </div>
+    <div class="form-group" [ngClass]="{'error': presenter?.invalid && presenter?.touched}">
+      <label for="presenter">Presenter:</label>
+      <em *ngIf="presenter.invalid && presenter.touched">Required</em>
+      <input id="presenter" formControlName="presenter" type="text" class="form-control" placeholder="presenter..." />
+    </div>
+
+    <div class="form-group" [ngClass]="{'error': duration?.invalid && duration?.touched}">
+      <label for="duration">Duration:</label>
+      <em *ngIf="duration.invalid && duration.touched">Required</em>
+      <select class="form-control" id="duration">
+        <option value="">select duration...</option>
+        <option value="1">Half Hour</option>
+        <option value="2">1 Hour</option>
+        <option value="3">Half Day</option>
+        <option value="4">Full Day</option>
+      </select>
+    </div>
+
+    <div class="form-group" [ngClass]="{'error': level?.invalid && level?.touched}">
+      <label for="level">Level:</label>
+      <em *ngIf="level.invalid && level.touched">Required</em>
+      <select class="form-control" id="level" formControlName="level">
+        <option value="">select level...</option>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+
+    <div class="form-group" [ngClass]="{'error': abstract?.invalid && abstract?.touched}">
+      <label for="abstract">Abstract:</label>
+      <em *ngIf="abstract.invalid && abstract.touched && abstract?.errors.required">Required</em>
+      <em *ngIf="abstract.invalid && abstract.touched && abstract?.errors.maxLength">Max length is 400</em>
+      <textarea id="abstract" formControlName="abstract" rows=3 class="form-control" placeholder="abstract..."></textarea>
+    </div>
+    <button type="submit" [disabled]="newSessionForm.invalid" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-default">Cancel</button>
+  </form>
+</div>

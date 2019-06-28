@@ -18,21 +18,21 @@ export class EventAddComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.newEvent = {
-      id: 1000,
-      name: 'Ng Spectacular',
-      date: new Date('8/8/2028'),
-      time: '10am',
-      price: 799.99,
-      location: {
-        address: '456 Happy St',
-        city: 'Felicity',
-        country: 'Angularistan'
-      },
-      onlineUrl: 'http://ngSpectacular.com',
-      imageUrl: 'http://ngSpectacular.com/logo.png',
-      sessions: []
-    };
+    // this.newEvent = {
+    //   id: 1000,
+    //   name: 'Ng Spectacular',
+    //   date: new Date('8/8/2028'),
+    //   time: '10am',
+    //   price: 799.99,
+    //   location: {
+    //     address: '456 Happy St',
+    //     city: 'Felicity',
+    //     country: 'Angularistan'
+    //   },
+    //   onlineUrl: 'http://ngSpectacular.com',
+    //   imageUrl: 'http://ngSpectacular.com/logo.png',
+    //   sessions: []
+    // };
   }
 
   cancel() {
