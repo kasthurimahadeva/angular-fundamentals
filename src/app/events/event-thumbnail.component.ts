@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {IEvent} from './shared/event.model';
 
 @Component({
   template: `
@@ -23,7 +24,7 @@ import {Component, Input} from '@angular/core';
   styles: [
     `
       .thumbnail {
-        min-height: 210px;
+        min-height: 250px;
       }
       .pad-right {
         padding-right: 10px;
@@ -36,7 +37,7 @@ import {Component, Input} from '@angular/core';
 })
 
 export class EventThumbnailComponent {
-  @Input() event: any;
+  @Input() event: IEvent;
 
   getStartingTime(): any {
     if (this.event && this.event.time === '8:00 am') {

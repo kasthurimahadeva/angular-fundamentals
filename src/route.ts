@@ -4,8 +4,9 @@ import {
   EventDetailsComponent,
   EventAddComponent,
   EventRouteActivator,
-  EventsListResolver
-} from './app/events/index';
+  EventsListResolver,
+  CreateSessionComponent
+} from './app/events';
 import {Error404Component} from './app/errors/404.component';
 
 export const appRoutes: Routes = [
@@ -18,6 +19,10 @@ export const appRoutes: Routes = [
     path: 'events/new',
     component: EventAddComponent,
     canDeactivate: ['canDeactivateCreateEvent']
+  },
+  {
+    path: 'events/session/new',
+    component: CreateSessionComponent
   },
   {
     path: 'events/:id',
