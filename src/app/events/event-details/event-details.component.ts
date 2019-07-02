@@ -13,6 +13,7 @@ export class EventDetailsComponent implements OnInit {
   event: IEvent;
   id: number;
   addMode: boolean;
+  filterBy: string = 'all';
 
   constructor(
     private eventService: EventService,
