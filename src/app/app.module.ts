@@ -5,7 +5,8 @@ import {
   EventDetailsComponent,
   EventAddComponent,
   EventThumbnailComponent,
-  CreateSessionComponent
+  CreateSessionComponent,
+  SessionListComponent
 } from './events';
 
 import { EventsAppComponent } from './events-app.component';
@@ -14,7 +15,6 @@ import {RouterModule} from '@angular/router';
 import {appRoutes} from '../route';
 import {Error404Component} from './errors/404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { SessionListComponent } from './events/session-list/session-list.component';
 
 @NgModule({
   declarations: [
