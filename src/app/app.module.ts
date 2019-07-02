@@ -6,7 +6,8 @@ import {
   EventAddComponent,
   EventThumbnailComponent,
   CreateSessionComponent,
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events';
 
 import { EventsAppComponent } from './events-app.component';
@@ -29,6 +30,7 @@ import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
+    DurationPipe,
   ],
   imports: [
     BrowserModule,
