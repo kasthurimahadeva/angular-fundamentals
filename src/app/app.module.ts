@@ -14,6 +14,7 @@ import {RouterModule} from '@angular/router';
 import {appRoutes} from '../route';
 import {Error404Component} from './errors/404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SessionListComponent } from './events/session-list/session-list.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     EventAddComponent,
     Error404Component,
     CreateSessionComponent,
+    SessionListComponent,
   ],
   imports: [
     BrowserModule,
