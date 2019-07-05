@@ -15,7 +15,7 @@ import {Toastr, TOASTR_TOKEN} from '../common/toastr.service';
     .error :-ms-input-placeholder { color: #999; }
   `]
 })
-export class ProfileComponent implements OnInit{
+export class ProfileComponent implements OnInit {
   profileForm: FormGroup;
   firstName: FormControl;
   lastName: FormControl;
@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit{
   }
 
   saveProfile(formValues: any) {
-    if(this.profileForm.valid) {
+    if (this.profileForm.valid) {
       this.auth.updateProfile(formValues.firstName, formValues.lastName);
       this.toastr.success('Profile saved');
       // this.router.navigate(['events']);
