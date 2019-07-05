@@ -18,8 +18,12 @@ import {Error404Component} from './errors/404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CollapsibleWellComponent } from './common/collapsible-well/collapsible-well.component';
 import {TOASTR_TOKEN, Toastr} from './common/toastr.service';
+import { SimpleModalComponent } from './common/simple-modal/simple-modal.component';
+import {JQ_TOKEN} from './common/jQuery.service';
+import { ModalTriggerDirective } from './common/modal-trigger.directive';
 
-declare let toastr: Toastr;
+let toastr: Toastr = window['toastr'];
+let jQuery = window['$'];
 
 @NgModule({
   declarations: [
@@ -34,6 +38,8 @@ declare let toastr: Toastr;
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +55,10 @@ declare let toastr: Toastr;
     {
       provide: TOASTR_TOKEN,
       useValue: toastr
+    },
+    {
+      provide: JQ_TOKEN,
+      useValue: jQuery
     }
   ],
   bootstrap: [EventsAppComponent]
