@@ -20,3 +20,4 @@ export class VoterService {
     return session.voters.some(voter => voter.toLocaleLowerCase() === voterName.toLocaleLowerCase());
   }
 }
+
