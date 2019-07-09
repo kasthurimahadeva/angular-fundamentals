@@ -23,6 +23,7 @@ import {JQ_TOKEN} from './common/jQuery.service';
 import { ModalTriggerDirective } from './common/modal-trigger.directive';
 import { UpvoteComponent } from './events/upvote/upvote.component';
 import { LocationValidatorDirective } from './events/event-add/location-validator.directive';
+import {HttpClientModule} from '@angular/common/http';
 
 let toastr: Toastr = window['toastr'];
 let jQuery = window['$'];
@@ -49,6 +50,7 @@ let jQuery = window['$'];
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [
