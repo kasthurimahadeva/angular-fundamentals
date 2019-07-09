@@ -1,4 +1,10 @@
 <div class="row" *ngFor="let session of filteredSessions">
+  <div class="col-md-1">
+    <div *ngIf="auth.isAuthenticated()">
+      <upvote (vote)="toggleVote(session)" [count]="session.voters.length" [voted]="userHasVoted(session)"></upvote>
+    </div>
+  </div>
+
   <div class="col-md-10">
     <collapsible-well>
       <div well-title>
