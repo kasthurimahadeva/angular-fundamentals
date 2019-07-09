@@ -1,6 +1,6 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {SessionListComponent} from './session-list.component';
-import {DebugElement} from '@angular/core';
+import {DebugElement, NO_ERRORS_SCHEMA} from '@angular/core';
 import {AuthService} from '../../user/auth.service';
 import {VoterService} from '../voter.service';
 import {ISession} from '../shared/event.model';
@@ -36,7 +36,9 @@ describe('SessionListComponent', () => {
         { provide: AuthService, useValue: mockAuthService },
         { provide: VoterService, useValue: mockVoterService }
       ],
-      schemas: []
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
     });
   }));
 
