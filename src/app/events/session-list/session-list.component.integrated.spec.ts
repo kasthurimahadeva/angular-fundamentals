@@ -7,6 +7,7 @@ import {ISession} from '../shared/event.model';
 import {UpvoteComponent} from '../upvote/upvote.component';
 import {DurationPipe} from '..';
 import {CollapsibleWellComponent} from '../../common/collapsible-well/collapsible-well.component';
+import {By} from '@angular/platform-browser';
 
 describe('SessionListComponent', () => {
   let fixture: ComponentFixture<SessionListComponent>,
@@ -58,7 +59,8 @@ describe('SessionListComponent', () => {
       component.ngOnChanges();
       fixture.detectChanges();
 
-      expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
+      // expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
+      expect(debugEl.query(By.css('[well-title]')).nativeElement.textContent).toContain('Session 1');
     });
   });
 });
