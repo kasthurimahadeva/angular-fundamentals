@@ -11,9 +11,9 @@ import {EventService} from '../shared/event.service';
 })
 export class EventDetailsComponent implements OnInit {
   event: IEvent;
-  addMode : boolean;
-  filterBy: string = 'all';
-  sortBy: string = 'votes';
+  addMode: boolean;
+  filterBy = 'all';
+  sortBy = 'votes';
 
   constructor(
     private eventService: EventService,
@@ -22,7 +22,7 @@ export class EventDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.forEach((data) => {
-      this.event = data['event'];
+      this.event = data.event;
       this.addMode = false;
     });
   }

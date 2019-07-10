@@ -23,10 +23,10 @@ export class LoginComponent {
   login(formValues) {
     this.authService.loginUser(formValues.userName, formValues.password).subscribe(
       resp => {
-        if(!resp){
+        if (!resp) {
           this.loginInvalid = true;
         } else {
-          this.router.navigate(['events'])
+          this.router.navigate(['events']);
         }
       }
     );

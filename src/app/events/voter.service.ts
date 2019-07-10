@@ -34,11 +34,11 @@ export class VoterService {
     return session.voters.some(voter => voter.toLocaleLowerCase() === voterName.toLocaleLowerCase());
   }
 
-  private handleError<T> (operation = 'operation', result?: T) {
+  private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       return of(result as T);
-    }
+    };
   }
 }
 
