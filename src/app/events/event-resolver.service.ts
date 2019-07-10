@@ -9,10 +9,10 @@ import {IEvent} from './shared/event.model';
 })
 export class EventResolverService implements Resolve<any> {
 
-  constructor(private eventService: EventService){ }
+  constructor(private eventService: EventService) { }
 
   resolve(route: ActivatedRouteSnapshot): Observable<IEvent> {
-    return this.eventService.getEvent(route.params['id']);
+    return this.eventService.getEvent(route.params.id);
   }
 
 

@@ -15,11 +15,14 @@ import {EventService} from '../events/shared/event.service';
 })
 
 export class NavBarComponent {
-  searchTerm: string = '';
+  searchTerm = '';
   searchedSessions = [];
 
-  constructor(private auth: AuthService,
-              private eventService: EventService) {}
+  auth: AuthService;
+  constructor(private authService: AuthService,
+              private eventService: EventService) {
+    this.auth = authService;
+  }
 
   searchSessions(searchTerm: string): void {
     this.eventService.searchSessions(searchTerm).subscribe(

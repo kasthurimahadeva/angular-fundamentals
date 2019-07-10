@@ -16,11 +16,11 @@ describe('SessionListComponent', () => {
     debugEl: DebugElement;
 
   beforeEach(async(() => {
-    let mockAuthService = {
+    const mockAuthService = {
       isAuthenticated: () => true,
       currentUser: {userName: 'Joe'}
     };
-    let mockVoterService = {
+    const mockVoterService = {
       userHasVoted: () => true
     };
 
@@ -51,9 +51,9 @@ describe('SessionListComponent', () => {
 
   describe('initial display', () => {
     it('should have the correct session title', () => {
-      component.sessions = <ISession[]>[
+      component.sessions = [
         {id: 3, name: 'Session 1', presenter: 'Joe', duration: 1, level: 'beginner', abstract: 'abstract', voters: ['john', 'bob']},
-      ];
+      ] as ISession[];
       component.filterBy = 'all';
       component.sortBy = 'name';
       component.eventId = 4;

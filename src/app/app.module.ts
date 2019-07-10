@@ -12,7 +12,7 @@ import {
 
 import { EventsAppComponent } from './events-app.component';
 import {NavBarComponent} from './nav/nav-bar.component';
-import {RouterModule} from '@angular/router';
+import {PreloadAllModules, RouterModule} from '@angular/router';
 import {appRoutes} from '../route';
 import {Error404Component} from './errors/404.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -51,7 +51,7 @@ let jQuery = window['$'];
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
   ],
   providers: [
     {
